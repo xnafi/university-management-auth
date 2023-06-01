@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only ./src/server.ts",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:fix": "lint --fix"
+  },
   "dependencies": {
     "@types/express": "^4.17.17",
     "cors": "^2.8.5",
@@ -11,6 +16,12 @@
     "mongoose": "^7.2.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   }
 }
